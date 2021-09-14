@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-color: #0065FC;
+}
+#color1{
+    color:var(--primary-color);
+}
+
+:root
+{
+    --second-color: #DEEBFF
+}
+#color2{
+    color:var(--second-color);
+}
+
+:root
+{
+    --third-color: #F2F2F2;
+}
+#color3{
+    color:var(--third-color);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    max-width: 1440px;
+    width: auto;
+    margin: 0 auto;
+    font-size: 0.95em;
+    }
+
+  header{
+      position: relative;/*relative car possible utilisation du site sur différents supports*/
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 25px;
+      margin: 0px 15px 0px 15px;/*marge haut/droite/bas/gauche*/
+    }
+
+    nav{
+        margin-top: 14px;
+        position: relative;
+     }
+
+    header nav a {
+        text-decoration: none;
+        color: #0065FC;
+        padding: 2em;/* 1em = 100% de la taille spécifiée par le navigateur si pas de modification coté client*/
+        font-weight: 500;/*épaisseur de l'écriture des "a href" du header*/
+    }
+
+    nav a:hover{
+        border-top: 5px solid #0065FC;/* dimension, couleur et type du trait bleu*/
+        padding-top: 40px;/* espace entre le trait bleu et "hébergement/activités/s'inscrire*/
+        color: #0065FC;
+    }
+
+    .activite{
+        color: black;
+    }
+
+    .s_inscrire{
+        font-weight: bold;
+    }
+
+    nav a:visited{
+        text-decoration: none;
+    }
+
+    main{
+        height: 1640px;
+    }
+
+    .en_tete{
+        padding-left: 15px;/*placement de l'en-tete*/
+        position: relative;
+    }
+
+    h1{
+        font-size: large;
+        font-weight: 800;
+       
+    }
+
+    p{
+        font-weight: 500;
+    }
+
+    form {
+        margin: 0.8em 0 1em 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .mark{/*icone du pointeur de map*/
+        font-size: 1.1em;
+        width: 50px;/*largeur de la box type block*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #F2F2F2;
+        border-radius: 15px 0 0 15px;
+        background-color: #F2F2F2;
+        cursor: pointer;
+    }
+
+    .mark:hover{/* action sur l'icone du pointeur de map*/
+        font-size: 1.3em;
+        color: #0065FC;
+    }
+
+    input{
+        height: 43.5px;/*hauteur de l'input*/
+        padding: 0 0 0 1em;
+        margin: 0;
+        width: 17%;
+        min-width: 155px;
+        border: 2px solid rgb(242,242,242);
+        font-size: 1.1em;
+        font-family: inherit;/*contrôle ce qui se passe lorsqu'aucune valeur de la police n'est spécifiée pour une propriété sur l'élément font-family.*/
+        font-weight: 600;
+        color: #0065FC;
+    }
+
+    input::placeholder{
+        color: grey;/*couleur de "Marseille, France"*/
+        font-weight: 600;
+        font-size: 1.1em;
+    }
+
+    button{
+        color: white;
+        background-color: #0065FC;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1.1em;
+        font-weight: 600;
+        height: 45px;
+        width: 125px;
+        padding: 10px;
+        margin: 0em;
+        border-radius: 0 16px 16px 0;
+        border: none;
+    }
+
+    .fa-search{/*icone de la loupe*/
+        display: none;/*none = pas visible en fomat pc*/
+    }
+    
+    button:hover{/*bouton rechercher*/
+        font-size: 1em;
+    }
+
+    .filtres{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 115px;
+    }
+
+    .filtres span{/*css du terme "Filtres"*/
+        font-weight: 800;
+        font-size: 1.15em;
+        display: block;
+    }
+
+    .filtres div{
+        border: 2px solid #F2F2F2;
+        border-radius: 25px;
+        height: 47px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 25px;
+        cursor: pointer;
+    }
+
+    .filtres div:hover{
+        border: 2px solid #0065fc;
+        background-color: #DEEBFF;
+        transition: 1s;
+    }
+
+    .icon{
+        color: #0065FC;
+        background-color: #DEEBFF;
+        font-size: 1.1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 50px;
+        height: 47px;
+        width: 45px;
+        margin: 0;
+    }
+
+    .filtres div span{
+        font-weight: 800;
+        font-size: 1.1em;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .filtres div:hover .descriptionfiltre{
+        color: #0065FC;
+        transition: 0.5s;/*delai d'apparition de la couleur bleu sur les filtres*/
+    }
+
+    .filtres div:hover .icon{
+        background-color: #0065FC;
+        color: white;/*couleur de l'icone en "hover"*/
+        transition: 1s;/*delai d'apparition de la couleur bleu sur les icones des filtres*/
+    }
+
+    .info{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        margin-top: 1.2em;
+    }
+
+    .cercle{
+        color: #0065FC;
+        font-size: 0.70em;
+        border: 1px solid grey;
+        border-radius: 100%;/*100% arrondi les 4 coins du carré pour le transformer en rond*/
+        height: 1.3em;
+        width: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        padding: 2.5px;
+    }
+
+    .phraseInfo{
+        font-weight: 600;
+        font-size: 1em;
+    }
+
+    .hebergement{
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 3.8% 0 3.8%;
+    }
+    .hebergement h2{
+        font-size: 1.3em;        
+        margin: 0 0 25px 0;
+    }
+
+    .hebergement section .vues{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 415px;
+    }
+
+    .hebergement section{
+        background-color: #F2F2F2;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 61%;
+        padding: 40px;
+    }
+
+    .hebergement p{/*css de la phrase "afficher plus*/
+        letter-spacing: 0.1px;
+        font-size: 1.2em;
+        font-weight: 800;
+        cursor: pointer;
+        width: fit-content;
+        margin-top: 50px;
+    }
+
+    .hebergement p:hover{/*css de la ligne sous "afficher plus*/
+        width: fit-content;
+        border-bottom: 2.5px solid #0065FC;
+    }
+
+    .blue{
+        color: #0065FC;
+    }
+    .grey{
+        color: #F2F2F2;
+    }
+
+    
+    
+
+
+    /*em = unité qui se veut relative et non absolu dans la configuration du navigateur
+    Les pixels eux, sont en rapport à la résolution de l'écran*/
