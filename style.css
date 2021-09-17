@@ -64,7 +64,7 @@ nav{
 
  header nav a {
     text-decoration: none;
-    color: #0065FC;
+    color:var(--primary-color);
     padding: 2em;/* 1em = 100% de la taille spécifiée par le navigateur si pas de modification coté client*/
     font-weight: 500;/*épaisseur de l'écriture des "a href" du header*/
 }
@@ -72,11 +72,11 @@ nav{
 nav a:hover{
     border-top: 5px solid #0065FC;/* dimension, couleur et type du trait bleu*/
     padding-top: 40px;/* espace entre le trait bleu et "hébergement/activités/s'inscrire*/
-    color: #0065FC;
+    color:var(--primary-color);
 }
 
 .activite{
-    color: black;
+    color:var(--fifth-color);
 }
 
 .s_inscrire{
@@ -85,7 +85,7 @@ nav a:hover{
     top: 19px;
     right: 0px;
     width: unset;
-    color: #0065FC;     
+    color:var(--primary-color);     
 }
 
 nav a:visited{
@@ -133,13 +133,13 @@ form {
     align-items: center;
     border: 1px solid #F2F2F2;
     border-radius: 15px 0 0 15px;
-    background-color: #F2F2F2;
+    background-color: var(--third-color);
     cursor: pointer;
 }
 
 .mark:hover{/* action sur l'icone du pointeur de map*/
     font-size: 1.3em;
-    color: #0065FC;
+    color:var(--primary-color);
 }
 
 input{
@@ -151,19 +151,19 @@ input{
     font-size: 1.1em;
     font-family: inherit;/*contrôle ce qui se passe lorsqu'aucune valeur de la police n'est spécifiée pour une propriété sur l'élément font-family.*/
     font-weight: 600;
-    color: #0065FC;
+    color:var(--primary-color);
 }
 
 input::placeholder{
-    color: black;/*couleur de "Marseille, France"*/
+    color:var(--fifth-color);/*couleur de "Marseille, France"*/
     font-weight: 800;
     font-size: 1.1em;
     font-style: bold;    
 }
 
 button{
-    color: white;
-    background-color: #0065FC;
+    color:var(--fourth-color);
+    background-color: var(--primary-color);
     cursor: pointer;
     font-family: inherit;
     font-size: 1em;
@@ -217,13 +217,13 @@ button{
 
 .filtres div:hover{
     border: 2px solid #0065fc;
-    background-color: #DEEBFF;
+    background-color: var(--second-color);
     transition: 1s;
 }
 
 .icon{
-    color: #0065FC;
-    background-color: #DEEBFF;
+    color:var(--primary-color);
+    background-color: var(--second-color);
     font-size: 1.1em;
     display: flex;
     align-items: center;
@@ -236,13 +236,13 @@ button{
 }
 
 .filtres div:hover .descriptionfiltre{
-    color: #0065FC;
+    color:var(--primary-color);
     transition: 0.5s;/*delai d'apparition de la couleur bleu sur les filtres*/
 }
 
 .filtres div:hover .icon{
-    background-color: #0065FC;
-    color: white;/*couleur de l'icone en "hover"*/
+    background-color: var(--primary-color);
+    color:var(--fourth-color);/*couleur de l'icone en "hover"*/
     transition: 1s;/*delai d'apparition de la couleur bleu sur les icones des filtres*/
 }
 
@@ -254,7 +254,7 @@ button{
 }
 
 .cercle{
-    color: #0065FC;
+    color:var(--primary-color);
     font-size: 0.70em;
     border: 1px solid grey;
     border-radius: 100%;/*100% arrondi les 4 coins du carré pour le transformer en rond*/
@@ -273,8 +273,7 @@ button{
 
 .title_pop{
     padding-top: 2em;
-    padding-bottom:  1em;
-    margin-left: 15px;
+    padding-bottom:  1em;    
     display: flex;
     justify-content: space-between; 
 }
