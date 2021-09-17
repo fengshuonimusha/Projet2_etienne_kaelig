@@ -23,6 +23,18 @@
     color:var(--third-color);
 }
 
+:root{
+    --fourth-color: #FFFFFF;
+}
+#color4{
+    color:var(--fourth-color);
+}
+:root{
+    --fifth-color: #000000;
+}
+#color5{
+    color:var(--fifth-color);
+}
 body {
     font-family: 'Raleway', sans-serif;       
     font-size: 0.95em;
@@ -90,13 +102,20 @@ h1{
 
 h2{
     font-size: 1.3em;
-    font-weight: 600;
+    font-weight: 800;
+}
+
+h3{
+    font-weight: bold;
 }
 
 p{
     font-weight: 500;    
     margin-bottom: 5px;
     font-size: 0.9em;
+}
+strong{
+    font-weight: bold;
 }
 
 form {
@@ -249,7 +268,7 @@ button{
 }
 
 .portevues1{
-    background-color: green;
+    background-color: var(--third-color) ;
 }
 
 .title_pop{
@@ -265,12 +284,32 @@ button{
     font-size: 1.2em;       
 }
 
+aside div {/*pourquoi avec cette directive, le "fa-chart-line" se remet en dessous de "les plus populaire???"*/    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 10px 5px 10px;
+}
+
 aside div article img {
     width: 39%;
     min-width: 39%;
     height: 140px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
     object-fit: cover;/*façon dont l'image s'adapte à <article> en utilisant sa largeur et sa hauteur.*/
+    margin-left: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+article{
+    background-color: var(--fourth-color);
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px var(--third-color) inset;    
+}
+
+.description{
+
 }
     
 
@@ -283,6 +322,20 @@ aside div article img {
     background-color: indigo;    
 }
 
-.vue{
+section div article img{
+    width: 39%;
+    min-width: 39%;
+    height: 140px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;/*façon dont l'image s'adapte à <article> en utilisant sa largeur et sa hauteur.*/
+    margin-left: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
 
+
+
+
+footer{
+    background-color: var(--third-color);
 }
