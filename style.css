@@ -151,7 +151,7 @@ input{
         padding: 0 0 0 1em;
         margin: 0;    
         min-width: 155px;
-        border: 2px solid rgb(242,242,242);
+        border: 2px solid var(--third-color);
         font-size: 1.1em;
         font-family: inherit;/*contrôle ce qui se passe lorsqu'aucune valeur de la police n'est spécifiée pour une propriété sur l'élément font-family.*/
         font-weight: 600;
@@ -162,7 +162,7 @@ input::placeholder{
         color:var(--fifth-color);/*couleur de "Marseille, France"*/
         font-weight: 800;
         font-size: 1.1em;
-        font-style: bold;    
+        font-style: bold;           
     }
 
 button{
@@ -176,7 +176,7 @@ button{
         width: 40px;
         padding: 10px;
         margin: 0em;
-        border-radius: 16px 16px 16px 16px;
+        border-radius: 16px;
         border: none;
     }
 
@@ -199,7 +199,8 @@ button{
         align-items: center;
         flex-wrap: wrap;
         height: 115px;
-        padding-top: 10px;    
+        padding-top: 10px;
+        gap: 5px;   
     }
 
 .filtres span{/*css du terme "Filtres"*/
@@ -270,171 +271,306 @@ button{
         padding: 2.5px;
     }
 
-    .portevues1{
-        background-color: var(--third-color) ;
-        display: flex;
-        flex-direction: column;
-        padding: 15px;    
-    }
+.portevues1{
+    background-color: var(--third-color) ;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;    
+}
 
-    .title_pop{
-        padding-top: 1em;
-            padding-bottom:  1em;    
-            display: flex;
-            justify-content: space-between; 
-        }
+.title_pop{
+    padding-top: 1em;
+    padding-bottom:  1em;    
+    display: flex;
+    justify-content: space-between; 
+}
     
-    .fa-chart-line{
-            font-size: 1.2em;       
-        }
+.fa-chart-line{
+    font-size: 1.2em;       
+}
 
-        aside div article img {
-            width: 39%;
-            min-width: 39%;
-            height: 140px;
-            border-radius: 20px 0 0 20px;
-            object-fit: cover;/*façon dont l'image s'adapte à <article> en utilisant sa largeur et sa hauteur.*/
-            margin-left: 7px;
-            margin-top: 7px;
-            margin-bottom: 2px;
-        }
+aside div article img {
+    width: 39%;
+    min-width: 39%;
+    height: 140px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;/*façon dont l'image s'adapte à <article> en utilisant sa largeur et sa hauteur.*/
+    margin-left: 7px;
+    margin-top: 7px;
+    margin-bottom: 2px;
+}
 
-        article{
-            background-color: var(--fourth-color);
-            border-radius: 20px;                           
-        }
+article{
+    background-color: var(--fourth-color);
+    border-radius: 20px;                           
+}
 
-        .heberg1{
-            display:flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+.heberg1{
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-        .heberg1 > article{/*pour ranger les descriptions a coté des images*/
-            display: flex;
-        }
+.heberg1 > article{/*pour ranger les descriptions a coté des images*/
+    display: flex;
+}
 
-        .heberg1 article div div{/*ciblage des 2 1er div de chacuns des 3 articles de la div héberg1*/
-            margin-top: 25px;
-            padding-left: 15px;
-        }
+.heberg1 article div div{/*ciblage des 2 1er div de chacuns des 3 articles de la div héberg1*/
+    margin-top: 25px;
+    padding-left: 15px;
+}
 
-        .heberg1 article .popstars{/*ciblage des div "popstars" de chaque article de "héberg1"*/
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-left: 15px;            
-        }
+.heberg1 article .popstars{/*ciblage des div "popstars" de chaque article de "héberg1"*/
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-left: 15px;            
+}        
 
-        .title_heberg_mars{
-            padding-top: 30px;
-            margin-bottom: 20px;
-        }
+.title_heberg_mars{
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.heberg2 > article,
+.heberg3 > article,
+.portevues3 > article{
+    box-shadow: 5px 5px 5px 5px var(--third-color);
+}
         
-    .hebergmars div article img{
+.hebergmars div article img{
+    width: 100%;
+    height: 140px;        
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;/*façon dont l'image s'adapte à <article> en utilisant sa largeur et sa hauteur.*/
+    margin-left: 7px;
+    padding-right: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;        
+}
+
+.heberg2{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;       
+}
+
+.heberg22{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 15px;
+}
+
+.heberg3{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;       
+}
+
+.heberg33{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 15px;
+}
+
+.etoiles{
+    font-size: 0.75em;
+    color: var(--primary-color);
+}
+
+.star{
+    color: var(--third-color);
+    font-size: 0.75em;
+}
+
+.plus{
+    margin-top: 30px;
+    margin-bottom: 45px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.activites h3{
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.activ{
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.portevues3{        
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;           
+}
+
+.portevues3 article{
+    border-radius: 20px 20px 20px 20px;        
+    margin-bottom: 10px;
+    padding-top: 5px;        
+}
+
+.portevues3 img{
+    width: 100%;
+    height: 140px;       
+    object-fit: cover;/*façon dont l'image s'adapte à <article> en utilisant sa largeur et sa hauteur.*/       
+    border-radius: 20px 20px 0 0;        
+    padding-right: 10px;        
+    margin-bottom: 7px;
+    margin-left: 5px;
+}
+
+footer{
+    background-color: var(--third-color);
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    padding-left: 10px;       
+}
+
+footer h3{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer p{
+    margin: 5px;   
+}
+
+.assistance{
+    padding-bottom: 25px;
+}
+
+@media screen and (min-width: 1024px){
+
+    header{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2px;
+        margin: 0px 10px 0px 10px;
+    }
+
+    nav{
+        margin-top: 14px;       
+    }
+
+    header nav a{
+        text-decoration: none;
+        color: var(--primary-color);
+        padding: 2em;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    nav a:hover{
+        border-top: 3px solid var(--primary-color);
+        padding-top: 25px;
+        color: var(--primary-color);
+    }
+    nav a:visited{
+        text-decoration: none;
+    }
+
+    .s_inscrire{
+        font-weight: bold;    
+        position: relative;        
+        right: 0px;
+        width: unset;
+        padding-top: 10px;                   
+    }
+
+    button{
+        text-align: center;
+        width: 10%;
+        border-radius: 0px 15px 15px 0px;
+    }
+
+    .rechercher{
+        display: contents;
+    }
+    .fa-search{
+        display: none;
+    }
+    
+    .choose{
+        display: grid;
         width: 100%;
-        height: 140px;        
-        border-radius: 20px 20px 0 0;
-        object-fit: cover;/*façon dont l'image s'adapte à <article> en utilisant sa largeur et sa hauteur.*/
-        margin-left: 7px;
-        padding-right: 7px;
-        margin-top: 7px;
-        margin-bottom: 7px;
-        box-shadow: 5px 5px 5px 5px var(--third-color);
+        height: 125px;
+        grid-template-areas: "filter filtres";/* A REVOIR C'EST PAS BON*/
     }
 
-       .heberg2{
-        display:flex;
-        flex-direction: column;
-        gap: 20px;       
+    .info{
+        padding-bottom: 25px;        
     }
 
-    .heberg22{
+    .hebergements_all{
         display: flex;
-        flex-direction: column;
-        gap: 5px;
-        padding-left: 15px;
-    }
-
-    .heberg3{
-        display:flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
         gap: 20px;
-        padding-top: 15px;       
     }
 
-    .heberg33{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        padding-left: 15px;
+    .hebergmars{
+        padding-left: 5px;
+        background-color: var(--third-color);
+        border-radius: 20px;
+        margin-bottom: 30px;
     }
 
-    .etoiles{
-        font-size: 0.75em;
+    .title_heberg_mars{
+        padding-left: 25px;
+    }
+    
+    .heberg2,
+    .heberg3{
+        flex-direction: row;
+        padding-left: 25px;
+        margin-right: 25px;;
+    }
+    .heberg2 > article,
+    .heberg3 > article{
+        width: calc(100%/3);
     }
 
     .plus{
-        margin-top: 30px;
-        margin-bottom: 45px;
-        font-size: 15px;
-        font-weight: bolder;
+        padding-left: 25px;
     }
 
-    .activites h3{
-        padding-left: 20px;
-       margin-bottom: 15px;
+    .portevues1{
+        border-radius: 20px;
+        padding: 40px;
     }
-
-    .activ{
-        margin-bottom: 10px;
-        font-weight: bolder;
-    }
-
-    .portevues3{        
-        display: flex;
-        flex-direction: column;
-        gap: 10px;           
-    }
-
-    .portevues3 article{
-        border-radius: 20px 20px 20px 20px;        
-        margin-bottom: 10px;
-        padding-top: 5px;        
-    }
-
-    .portevues3 img{
-        width: 100%;
-        height: 140px;       
-        object-fit: cover;/*façon dont l'image s'adapte à <article> en utilisant sa largeur et sa hauteur.*/       
-        border-radius: 20px 20px 0 0;        
-        padding-right: 10px;        
-        margin-bottom: 7px;
-        margin-left: 5px;
-    }
-
+    
     footer{
-        background-color: red;/*je ne vois pas la couleur de var(--fourth color)*/
-    }
-
-    footer div{
         display: flex;
-        flex-direction: column;
-        padding-bottom: 25px;
-        padding-left: 10px;       
-    }
-
-    footer h3{
-        padding-top: 15px;
-        padding-bottom: 15px;
+        flex-direction: row;                
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-top: 25px;
     }
 
     footer p{
-        margin: 5px;
+        line-height: 32px;
+    }
+    
+    .flats{
+        margin-left: 200px;
     }
 
     .assistance{
-        padding-bottom: 25px;
+        margin-left: 300px;
     }
 
+
+
     
-            
+}
