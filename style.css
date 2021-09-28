@@ -565,6 +565,77 @@ footer p{
         display: flex;
         justify-content: space-between;
     }
+
+    .portevues3 article{        
+        box-shadow: 2px 2px 2px 1px var(--third-color);
+    }
+
+    .part1{
+        display: grid;
+        grid-template-columns:25% 20% 15% ;
+        grid-template-rows:20px 50px 20px ;
+        grid-template-areas: 
+            "vieux vieux pomegues pomegues"
+            "vieux vieux pomegues pomegues"
+            "vieux vieux frioul frioul"
+            "vieux vieux frioul frioul";
+        gap: 40px;
+    }
+
+    .vieux{
+        grid-area: vieux;
+    }
+
+    .pomegues{
+        grid-area: pomegues;
+    }
+
+    .frioul{
+        grid-area: frioul;
+    }
+
+    .part2{
+        display: grid;
+        grid-template-columns:25% 20% 15% ;
+        grid-template-rows:20px 50px 20px ;
+        grid-template-areas:
+            "calanques calanques dame dame"
+            "calanques calanques dame dame"
+            "calanques calanques parc parc"
+            "calanques calanques parc parc";
+            gap: 40px;
+    }
+
+    .calanques{
+        grid-area: calanques;
+    }
+
+    .dame{
+        grid-area: dame;
+    }
+
+    .parc{
+        grid-area: parc;
+    }
+
+    .portevues3{
+       display: grid;       
+       grid-template-rows: 50% 50%;
+       grid-template-columns: 25%;
+       grid-template-areas:
+        "part1 part1 part2 part2"
+        "part1 part1 part2 part2";
+        gap: 40px;
+    }
+
+    .part1{
+        grid-area: part1;
+    }
+
+    .part2{
+        grid-area: part2;
+    }
+
     
     footer{
         display: flex;
