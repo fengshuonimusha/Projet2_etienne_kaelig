@@ -623,8 +623,7 @@ footer p{
        grid-template-rows: 50% 50%;
        grid-template-columns: 25%;
        grid-template-areas:
-        "part1 part1 part2 part2"
-        "part1 part1 part2 part2";
+        "part1 part1 part2 part2";        
         gap: 40px;
     }
 
