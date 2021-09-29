@@ -123,7 +123,7 @@ strong{
         font-weight: bold;
     }
 
-form {
+form{
         margin: 0.8em 0 1em 0;
         display: flex;
         justify-content: flex-start;
@@ -654,9 +654,138 @@ footer p{
 
     .assistance{
         margin-left: 300px;
+    }        
+}
+
+@media screen and (min-width:768px) and (max-width: 1023px){
+
+    header{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2px;
+        margin: 0px 10px 0px 10px;
     }
 
+    nav{
+        margin-top: 14px;       
+    }
 
+    header nav a{
+        text-decoration: none;
+        color: var(--primary-color);
+        padding: 2em;
+        cursor: pointer;
+        font-weight: 500;
+    }
 
+    nav a:hover{
+        border-top: 3px solid var(--primary-color);
+        padding-top: 25px;
+        color: var(--primary-color);
+    }
+
+    nav a:visited{
+        text-decoration: none;
+    }
+
+    .s_inscrire{
+        font-weight: bold;    
+        position: relative;        
+        right: 0px;
+        width: unset;
+        padding-top: 10px;                   
+    }    
+
+    form{
+        margin: 0.8em 0 1em 0;
+        display: flex;
+        justify-content:center;
+    }
+
+    .mark{/*icone du pointeur de map*/
+        font-size: 1.1em;
+        width: 30px;/*largeur de la box type block*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #F2F2F2;
+        border-radius: 15px 0 0 15px;
+        background-color: var(--third-color);
+        cursor: pointer;
+    }
     
+    .mark:hover{/* action sur l'icone du pointeur de map*/
+        font-size: 1.3em;
+        color:var(--primary-color);
+    }
+
+    input{
+        height: 43.5px;/*hauteur de l'input*/
+        padding: 0 0 0 1em;
+        margin: 0;    
+        min-width: 155px;
+        border: 2px solid var(--third-color);
+        font-size: 1.1em;
+        font-family: inherit;/*contrôle ce qui se passe lorsqu'aucune valeur de la police n'est spécifiée pour une propriété sur l'élément font-family.*/
+        font-weight: 600;
+        color:var(--primary-color);
+    }
+
+    input::placeholder{
+        color:var(--fifth-color);/*couleur de "Marseille, France"*/
+        font-weight: 800;
+        font-size: 1.1em;
+        font-style: bold;           
+    }
+
+    button{
+        color:var(--fourth-color);
+        background-color: var(--primary-color);
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1em;
+        font-weight: 600;
+        height: 43.5px;
+        width: 240px;
+        padding: 10px;
+        margin: 0em;
+        border-radius: 0px 16px 16px 0px;
+        border: none;
+    }
+
+    .fa-search{/*icone de la loupe*/
+        display: none;/*none = pas visible en fomat pc*/
+    }
+
+    .rechercher{
+        display: content;/*content: visible au format mobile*/
+    }
+    
+    .filtres{
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .info{
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;                
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-top: 25px;
+    }
+
+    footer > div{
+        width: calc(100%/3);
+    }
+
+    footer p{
+        line-height: 32px;
+    }
 }
