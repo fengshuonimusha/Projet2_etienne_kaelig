@@ -289,8 +289,8 @@ button{
 }
 
 aside div article img {
-    width: 39%;
-    min-width: 39%;
+    width: 100%;
+    min-width: 100%;
     height: 140px;
     border-radius: 20px 0 0 20px;
     object-fit: cover;/*façon dont l'image s'adapte à <article> en utilisant sa largeur et sa hauteur.*/
@@ -457,7 +457,7 @@ footer p{
         align-items: center;
         padding-top: 2px;
         margin: 0px 10px 0px 10px;
-    }
+    }    
 
     nav{
         margin-top: 14px;       
@@ -696,7 +696,11 @@ footer p{
         right: 0px;
         width: unset;
         padding-top: 10px;                   
-    }    
+    }
+    
+    .en_tete, .filter, .info, .title_heberg_mars, .plus, h2, .part1, .part2{
+        margin-left: 8px;
+    }
 
     form{
         margin: 0.8em 0 1em 0;
@@ -760,7 +764,7 @@ footer p{
     }
 
     .rechercher{
-        display: content;/*content: visible au format mobile*/
+        display: contents;/*content: visible au format mobile*/
     }
     
     .filtres{
@@ -772,6 +776,8 @@ footer p{
         margin-top: 1em;
         margin-bottom: 2em;
     }
+
+    
 
     footer{
         display: flex;
