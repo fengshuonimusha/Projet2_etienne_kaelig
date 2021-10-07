@@ -60,42 +60,6 @@ main{
         padding: 8px;
     }
 
-nav{
-        display: flex;
-        justify-content: space-between;
-        position: unset;    
-    }
-
-header nav a {
-        text-decoration: none;
-        color:var(--primary-color);
-        padding: 2em;/* 1em = 100% de la taille spécifiée par le navigateur si pas de modification coté client*/
-        font-weight: 500;/*épaisseur de l'écriture des "a href" du header*/
-    }
-
-nav a:hover{
-        border-top: 5px solid var(--primary-color);/* dimension, couleur et type du trait bleu*/
-        padding-top: 40px;/* espace entre le trait bleu et "hébergement/activités/s'inscrire*/
-        color:var(--primary-color);
-    }
-
-.activite{
-        color:var(--fifth-color);
-    }
-
-.s_inscrire{
-        font-weight: bold;    
-        position: absolute;
-        top: 19px;
-        right: 0px;
-        width: unset;
-        color:var(--primary-color);     
-    }
-
-nav a:visited{
-        text-decoration: none;
-    }
-
 h1{
         font-size: large;
         font-weight: 800;
@@ -121,6 +85,53 @@ p{
 
 strong{
         font-weight: bold;
+    }
+
+nav{
+        display: flex;
+        justify-content: space-between;
+        position: unset;    
+    }
+
+.activite{
+        color:var(--fifth-color);
+    }
+
+.signup{
+        font-weight: bold;    
+        position: absolute;
+        top: 0px;
+        right: 0px;        
+        padding: 2em;
+        color: var(--primary-color);     
+    }
+
+header nav .links{
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+header nav .links a{
+    flex: 1;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 2em;
+    cursor: pointer;
+    font-weight: 500px;
+    border-bottom: 3px solid transparent;         
+}
+
+header nav .links a:hover{
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header nav .signup a:hover{
+    border-bottom: 3px solid var(--primary-color);/* marche pas*/
+}
+
+nav a:visited{
+        text-decoration: none;
     }
 
 form{
@@ -186,6 +197,11 @@ button{
 
 .rechercher{
         display: none;/*none = pas visible en fomat pc*/
+    }
+
+.choose{
+        display: flex;
+        flex-direction: column;
     }
 
 .filter{
@@ -448,8 +464,47 @@ footer p{
     padding-bottom: 25px;
 }
 
+/**********\\FORMAT DESKTOP//**************/
+
 @media screen and (min-width: 1024px){
 
+    .signup{
+        font-weight: bold;    
+        position:relative;
+        top: 0px;
+        right: 0px;        
+        padding: 2em;           
+    }
+
+    header nav .signup a:hover{/* marche pas*/ 
+        border-bottom: 3px solid var(--primary-color);   
+        font-weight: bold;    
+        position:relative;
+        top: 0px;
+        right: 0px;        
+        padding: 2em;
+        border-top: 3px solid var(--primary-color);
+    }
+
+    header nav .links{
+        display: flex;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav .links a{    
+        padding: 2em;
+        cursor: pointer;
+        font-weight: 500px;
+        border-top: 3px solid transparent;
+        border-bottom: none;     
+    }
+
+    header nav .links a:hover{
+        border-top: 3px solid var(--primary-color);
+        border-bottom: none;
+    }
+    
     header{
         position: relative;
         display: flex;
@@ -471,22 +526,10 @@ footer p{
         font-weight: 500;
     }
 
-    nav a:hover{
-        border-top: 3px solid var(--primary-color);
-        padding-top: 25px;
-        color: var(--primary-color);
-    }
+    
     nav a:visited{
         text-decoration: none;
-    }
-
-    .s_inscrire{
-        font-weight: bold;    
-        position: relative;        
-        right: 0px;
-        width: unset;
-        padding-top: 10px;                   
-    }
+    }    
 
     button{
         text-align: center;
@@ -501,11 +544,11 @@ footer p{
         display: none;
     }
     
-    .choose{
-        display: grid;
-        width: 100%;        
-        grid-template-areas: "filter filtres";/* A REVOIR C'EST PAS BON*/
-    }
+   .choose{
+       display: flex;
+       align-items: center;
+       flex-direction: row;
+   }    
 
     .filtres{
         display: flex;
@@ -634,7 +677,6 @@ footer p{
     .part2{
         grid-area: part2;
     }
-
     
     footer{
         display: flex;
@@ -655,7 +697,8 @@ footer p{
     .assistance{
         margin-left: 300px;
     }        
-}
+
+}    
 
 @media screen and (min-width:768px) and (max-width: 1023px){
 
@@ -678,24 +721,47 @@ footer p{
         padding: 2em;
         cursor: pointer;
         font-weight: 500;
-    }
-
-    nav a:hover{
-        border-top: 3px solid var(--primary-color);
-        padding-top: 25px;
-        color: var(--primary-color);
-    }
+    }    
 
     nav a:visited{
         text-decoration: none;
     }
 
-    .s_inscrire{
+    .signup{
         font-weight: bold;    
-        position: relative;        
-        right: 0px;
-        width: unset;
-        padding-top: 10px;                   
+        position:relative;
+        top: 0px;
+        right: 0px;        
+        padding: 2em;           
+    }
+
+    header nav .signup a:hover{/* marche pas*/ 
+        border-bottom: 3px solid var(--primary-color);   
+        font-weight: bold;    
+        position:relative;
+        top: 0px;
+        right: 0px;        
+        padding: 2em;
+        border-top: 3px solid var(--primary-color);
+    }
+
+    header nav .links{
+        display: flex;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav .links a{    
+        padding: 2em;
+        cursor: pointer;
+        font-weight: 500px;
+        border-top: 3px solid transparent;
+        border-bottom: none;     
+    }
+
+    header nav .links a:hover{
+        border-top: 3px solid var(--primary-color);
+        border-bottom: none;
     }
     
     .en_tete, .filter, .info, .title_heberg_mars, .plus, h2, .part1, .part2{
